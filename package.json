@@ -15,10 +15,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "postinstall": "prisma skills sync || exit 0"
   },
   "devDependencies": {
-    "prisma": "^8.0.0-rc.29",
+    "prisma": "^6.19.3",
     "typescript": "^7.0.2"
   },
   "allowScripts": {
@@ -26,6 +27,6 @@
     "workerd@1.20261002.1": true
   },
   "dependencies": {
-    "@prisma/client": "^7.10.1"
+    "@prisma/client": "^6.19.3"
   }
 }
