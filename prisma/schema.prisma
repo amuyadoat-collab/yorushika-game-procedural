@@ -10,3 +10,14 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+// 楽曲カードマスター
+model Card {
+  id     Int    @id
+  rank   Int    // 大富豪ルール上の強さの指標
+  name   String // 楽曲タイトル
+  album  String // 収録アルバム名
+  init   String // 頭文字
+  last   String // 最後の文字
+  artist String // アーティスト名
+}
