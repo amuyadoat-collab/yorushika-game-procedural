@@ -18,6 +18,14 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "prisma": "^8.0.0-rc.29",
     "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261002.1": true
+  },
+  "dependencies": {
+    "@prisma/client": "^7.10.1"
   }
 }
