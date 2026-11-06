@@ -1,0 +1,13 @@
+{
+  // prismaディレクトリ内のTypeScriptファイルをコンパイルするためのtsconfig.json
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    // メインの "rootDir": "./src" を上書き、または無効化して
+    // prismaディレクトリ周辺のファイルを扱えるようにする
+    "rootDir": ".."
+  },
+  "include": [
+    "./**/*.ts",
+    "../src/generated/prisma/**/*.ts"
+  ]
+}
