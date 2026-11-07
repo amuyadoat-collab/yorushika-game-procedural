@@ -7,3 +7,4 @@ prisma/dev.db-journal
 
 # 自動生成された Prisma Client のコード群
 src/generated/
+output.txt
