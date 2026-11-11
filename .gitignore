@@ -1,3 +1,10 @@
 sample/
 node_modules/
 dist/
+# データベースの生データ（実体ファイル）
+prisma/dev.db
+prisma/dev.db-journal
+
+# 自動生成された Prisma Client のコード群
+src/generated/
+output.txt
