@@ -1,0 +1,28 @@
+name: Unit Test CI
+
+on:
+  pull_request:
+    branches: [main] # マージ先となる対象ブランチ
+  push:
+    branches: [main]
+
+jobs:
+  # 💡 この「test-job」という名前を後でGitHubの設定画面で使います
+  test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '24' # プロジェクトのNodeバージョン
+        cache: 'npm'       
+
+    - name: Install dependencies
+      run: npm ci          # 依存関係の構築
+
+    - name: Run unit tests
+      run: npm test        # package.jsonの "scripts": { "test": "..." } が実行
