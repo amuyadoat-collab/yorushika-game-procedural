@@ -3,6 +3,7 @@ export default {
   preset: "ts-jest/presets/default-esm",
   testEnvironment: "node",
   extensionsToTreatAsEsm: [".ts"],
+  testPathIgnorePatterns: ["/node_modules/", "/dist/"], // distフォルダを無視する
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1",
   },
