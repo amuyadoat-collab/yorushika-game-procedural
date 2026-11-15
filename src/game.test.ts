@@ -48,7 +48,7 @@ describe("MVP/CLI版 ロジック検証", () => {
     });
     test("出せるカードがない場合は null を返す", () => {
       const cpuHands = mockCards.slice(1, 3);
-      const fieldCard = mockCards[3];
+      const fieldCard = mockCards[0];
       expect(chooseCpuCard(cpuHands, fieldCard)).toBeNull()
     });
   });
